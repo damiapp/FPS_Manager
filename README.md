@@ -8,6 +8,7 @@ Multiplayer online game with 1vs1 scheduled matches that happen weather the play
 **TECHNICAL SPECS**  
 Technical Form: 2D elements with depth  
 View: Menu view only.  
+Engine: Godot  
 Platform: Android, iOS  
 Language: C++  
 Device: Mobile  
