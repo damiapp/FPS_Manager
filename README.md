@@ -8,9 +8,9 @@ Multiplayer online game with 1vs1 scheduled matches that happen weather the play
 **TECHNICAL SPECS**  
 Technical Form: 2D elements with depth  
 View: Menu view only.  
-Engine: Godot  
+Engine: Unity  
 Platform: Android, iOS  
-Language: C++  
+Language: C#,Python,SQL  
 Device: Mobile  
 **GAMEPLAY**  
 The player controls and manages an FPS esports team, battling through the divisions to rise to the top. Each division has 16 teams and after reaching the top 3 you qualify to go up into a higher division. The players of each division participate in tournaments to determine their ranking in the division. At the end of the season teams that have qualified to rise to a higher division are entered into a global knockout tournament for the glory of winning the title of World best of said division. Once a team goes up a division, the quality of players they can buy increases by a level (both minimum and maximum).  
