@@ -1,5 +1,6 @@
 from Player import Player
 import statistics 
+import random
 class Team:
     def __init__(self, players, unity, map_skill, expenses, strat):
         self.players = players
@@ -13,3 +14,9 @@ class Team:
     def print_team(self):
         for p in self.players:
             print(p.name)
+        
+    def get_rand(self):
+        r=random.randint(0,4)
+        while not self.players[r].alive:
+            r=random.randint(0,4)
+        return self.players[r]
