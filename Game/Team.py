@@ -15,6 +15,10 @@ class Team:
         for p in self.players:
             print(p.name)
         
+    def reset_alive(self):
+        for p in self.players:
+            p.set_alive(True)
+
     def get_rand(self):
         r=random.randint(0,4)
         while not self.players[r].alive:
