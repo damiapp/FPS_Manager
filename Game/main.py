@@ -104,4 +104,5 @@ for i in range(30):
     team2.reset_alive()
     if(sc.t1>15 or sc.t2>15):
         break
+    print("-----------------------")
 sc.print_score()
