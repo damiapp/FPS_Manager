@@ -24,10 +24,10 @@ def check_win(team1,team2,sc):
     for p in team2.players:
         if not p.alive:
             k2=k2+1
-    if k1 is 5:
+    if k1 == 5:
         sc.set_t2(sc.t2+1)
         return True
-    if k2 is 5:
+    if k2 == 5:
         sc.set_t1(sc.t1+1)
         return True
     return False
@@ -35,8 +35,8 @@ def check_win(team1,team2,sc):
 def Round(team1,team2,env,wipe_out,sc):
     while True:
         yield env.timeout(1)
-        ct=team2.get_rand()
         t=team1.get_rand()
+        ct=team2.get_rand()
         m1=t.get_m()
         m2=-ct.get_m()
         w1=random.uniform(0,1)
@@ -61,25 +61,21 @@ def sigmoid(x):
 def weight(p1,p2):
     pass
 
-t1=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Dami", "Kodan",25)
-t2=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Veseli", "Ghost",24)
-t3=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Suki", "Ljuba",24)
-t4=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Dzoni", "Panzer",24)
-t5=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Sile", "Gile",24)
-t6=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Filip", "pilif",24)
-t7=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Luka", "Kalu",24)
+t1=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Dami", "Kodan",25,10)
+t2=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Veseli", "Ghost",24,10)
+t3=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Suki", "Ljuba",24,10)
+t4=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Dzoni", "Panzer",24,10)
+t5=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Sile", "Gile",24,10)
 
-team1=Team([t1,t2,t3,t4,t5,t6,t7],1,0,1,1)
+team1=Team([t1,t2,t3,t4,t5],1,0,1,1)
 
-ct1=Player(0.8, 0.9, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Peter", "Kodan",25)
-ct2=Player(0.8, 0.9, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Faker", "Ghost",24)
-ct3=Player(0.8, 0.9, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Mker", "Ljuba",24)
-ct4=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "FK1ER", "Panzer",24)
-ct5=Player(0.8, 0.89, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "BR0NER", "Gile",24)
-ct6=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "My2p", "pilif",24)
-ct7=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Gip1", "Kalu",24)
+ct1=Player(0.8, 0.9, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Peter", "Kodan",25,10)
+ct2=Player(0.8, 0.9, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Faker", "Ghost",24,10)
+ct3=Player(0.8, 0.9, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Mker", "Ljuba",24,10)
+ct4=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "FK1ER", "Panzer",24,10)
+ct5=Player(0.8, 0.89, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "BR0NER", "Gile",24,10)
 
-team2=Team([ct1,ct2,ct3,ct4,ct5,ct6,ct7],1,0,1,1)
+team2=Team([ct1,ct2,ct3,ct4,ct5],1,0,1,1)
 
 #g1=0
 #g2=0
