@@ -1,0 +1,123 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.0f1 (c7b5465681fb) revision 13088070'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19041.867; Version 2004; 64bit' Language: 'en' Physical Memory: 8157 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\Unity\Editor\2020.3.0f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Nikola Damjanovic/FPS_GIT/FPS_Manager/Game/Major Tactics FPS Manager
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+63459
+Successfully changed project path to: D:/Nikola Damjanovic/FPS_GIT/FPS_Manager/Game/Major Tactics FPS Manager
+D:/Nikola Damjanovic/FPS_GIT/FPS_Manager/Game/Major Tactics FPS Manager
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 52.56 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.0f1 (c7b5465681fb)
+[Subsystems] Discovering subsystems at path D:/Unity/Editor/2020.3.0f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Nikola Damjanovic/FPS_GIT/FPS_Manager/Game/Major Tactics FPS Manager/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 (ID=0x1c81)
+    Vendor:   
+    VRAM:     1977 MB
+    Driver:   27.21.14.5671
+Initialize mono
+Mono path[0] = 'D:/Unity/Editor/2020.3.0f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Unity/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56412
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/Editor/2020.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001134 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 41.57 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.875 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000804 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 41.15 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.052 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.60 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1824 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.6 MB.
+System memory in use after: 86.5 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2267.
+Total: 2.329600 ms (FindLiveObjects: 0.219000 ms CreateObjectMapping: 0.095300 ms MarkObjects: 1.877200 ms  DeleteObjects: 0.136800 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Images/cash_icon.png
+  artifactKey: Guid(f9dc25249bce4d8428567fc5eaede01a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/cash_icon.png using Guid(f9dc25249bce4d8428567fc5eaede01a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a320820f0c8f0fd7917831e7480fa16') in 0.416063 seconds
+  Import took 0.419898 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017441 seconds.
+  path: Assets/Images/team_logo.png
+  artifactKey: Guid(2bdce0f042799a14ca1adc325c57f07b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/team_logo.png using Guid(2bdce0f042799a14ca1adc325c57f07b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03c58b6fb308ae18ad6f9e86ffa2e86a') in 0.033640 seconds
+  Import took 0.037451 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/Images/fans_icon.png
+  artifactKey: Guid(e45fc8fee4730fc4fb6584e484e594cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/fans_icon.png using Guid(e45fc8fee4730fc4fb6584e484e594cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36eed0618e4ed0838b20f6d2cb8c1b40') in 0.028085 seconds
+  Import took 0.031231 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/Tests/Tests.asmdef
+  artifactKey: Guid(833a97f8ddd1bd14880b3a8351d833b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tests/Tests.asmdef using Guid(833a97f8ddd1bd14880b3a8351d833b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '993db4378ca9269205a54af2b382e1ef') in 0.019797 seconds
+  Import took 0.023226 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000427 seconds.
+  path: Assets/Images/SplashScreen_v0.png
+  artifactKey: Guid(6ace7045b1fe79a41bde9e8b839a6fe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/SplashScreen_v0.png using Guid(6ace7045b1fe79a41bde9e8b839a6fe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '091d916eaf29f7db701805cf5c448e65') in 0.039659 seconds
+  Import took 0.043747 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Images/token_icon.png
+  artifactKey: Guid(01649dbc527474a458103c807fc5e3b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/token_icon.png using Guid(01649dbc527474a458103c807fc5e3b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '095b459c15cc6802f5945fb83ec9992b') in 0.023500 seconds
+  Import took 0.026692 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

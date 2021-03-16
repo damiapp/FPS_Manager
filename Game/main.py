@@ -37,12 +37,10 @@ def Round(team1,team2,env,wipe_out,sc):
         yield env.timeout(1)
         t=team1.get_rand()
         ct=team2.get_rand()
-        m1=t.get_m()
-        m2=-ct.get_m()
-        w1=random.uniform(0,1)
-        w2=random.uniform(0,1)
-        b=random.uniform(-1,1)
-        if(NN(m1,m2,w1,w2,b)>0.5):
+        m1=t.get_m_w()
+        m2=-ct.get_m_w()
+        b=random.uniform(-0.2,0.2)
+        if(NN(m1,m2,b)>0.5):
             print(t.name+" has killed " +ct.name+" time: "+str(env.now))
             ct.set_alive(False)
         else:
@@ -51,8 +49,8 @@ def Round(team1,team2,env,wipe_out,sc):
         if(check_win(team1,team2,sc)):
             wipe_out.succeed()
 
-def NN(m1, m2, w1, w2, b):
-    z=m1*w1+m2*w2+b
+def NN(m1, m2, b):
+    z=m1+m2+b
     return sigmoid(z)
 
 def sigmoid(x):
