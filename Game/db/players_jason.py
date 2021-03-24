@@ -1,0 +1,176 @@
+import json
+data = {}
+data['Players'] = []
+
+#1
+data['Players'].append({
+    'talent':0.8,
+    'map_skill':0.8, 
+    'weapon_skill':0.8,
+    'utility_usage':0.8, 
+    'game_sense':0.82, 
+    'communication':0.81, 
+    'mood':0.82, 
+    'motivation':0.86, 
+    'alive':True, 
+    'nationality':'Srbija', 
+    'name':'Dami', 
+    'surname':'Kodan', 
+    'age':25,
+    'cost':10
+})
+#2
+data['Players'].append({
+    'talent':0.8,
+    'map_skill':0.8, 
+    'weapon_skill':0.8,
+    'utility_usage':0.8, 
+    'game_sense':0.82, 
+    'communication':0.81, 
+    'mood':0.82, 
+    'motivation':0.86, 
+    'alive':True, 
+    'nationality':'Srbija', 
+    'name':'Veseli', 
+    'surname':'Ghost', 
+    'age':25,
+    'cost':10
+})
+#3
+data['Players'].append({
+    'talent':0.8,
+    'map_skill':0.8, 
+    'weapon_skill':0.8,
+    'utility_usage':0.8, 
+    'game_sense':0.82, 
+    'communication':0.81, 
+    'mood':0.82, 
+    'motivation':0.86, 
+    'alive':True, 
+    'nationality':'Srbija', 
+    'name':'Suki', 
+    'surname':'Ljuba', 
+    'age':25,
+    'cost':10
+})
+#4
+data['Players'].append({
+    'talent':0.8,
+    'map_skill':0.8, 
+    'weapon_skill':0.8,
+    'utility_usage':0.8, 
+    'game_sense':0.82, 
+    'communication':0.81, 
+    'mood':0.82, 
+    'motivation':0.86, 
+    'alive':True, 
+    'nationality':'Srbija', 
+    'name':'Dzoni', 
+    'surname':'Panzer', 
+    'age':25,
+    'cost':10
+})
+#5
+data['Players'].append({
+    'talent':0.8,
+    'map_skill':0.8, 
+    'weapon_skill':0.8,
+    'utility_usage':0.8, 
+    'game_sense':0.82, 
+    'communication':0.81, 
+    'mood':0.82, 
+    'motivation':0.86, 
+    'alive':True, 
+    'nationality':'Srbija', 
+    'name':'Sile', 
+    'surname':'Gile', 
+    'age':25,
+    'cost':10
+})
+#6
+data['Players'].append({
+    'talent':0.8,
+    'map_skill':0.8, 
+    'weapon_skill':0.9,
+    'utility_usage':0.8, 
+    'game_sense':0.82, 
+    'communication':0.81, 
+    'mood':0.82, 
+    'motivation':0.86, 
+    'alive':True, 
+    'nationality':'Srbija', 
+    'name':'Peter', 
+    'surname':'Kodan', 
+    'age':25,
+    'cost':10
+})
+#7
+data['Players'].append({
+    'talent':0.8,
+    'map_skill':0.9, 
+    'weapon_skill':0.8,
+    'utility_usage':0.8, 
+    'game_sense':0.82, 
+    'communication':0.81, 
+    'mood':0.82, 
+    'motivation':0.86, 
+    'alive':True, 
+    'nationality':'Srbija', 
+    'name':'Faker', 
+    'surname':'Kodan', 
+    'age':25,
+    'cost':10
+})
+#8
+data['Players'].append({
+    'talent':0.8,
+    'map_skill':0.9, 
+    'weapon_skill':0.8,
+    'utility_usage':0.8, 
+    'game_sense':0.82, 
+    'communication':0.81, 
+    'mood':0.82, 
+    'motivation':0.86, 
+    'alive':True, 
+    'nationality':'Srbija', 
+    'name':'Mker', 
+    'surname':'Kodan', 
+    'age':25,
+    'cost':10
+})
+#9
+data['Players'].append({
+    'talent':0.8,
+    'map_skill':0.9, 
+    'weapon_skill':0.8,
+    'utility_usage':0.8, 
+    'game_sense':0.82, 
+    'communication':0.81, 
+    'mood':0.82, 
+    'motivation':0.86, 
+    'alive':True, 
+    'nationality':'Srbija', 
+    'name':'FK1ER', 
+    'surname':'Kodan', 
+    'age':25,
+    'cost':10
+})
+#10
+data['Players'].append({
+    'talent':0.8,
+    'map_skill':0.9, 
+    'weapon_skill':0.8,
+    'utility_usage':0.8, 
+    'game_sense':0.82, 
+    'communication':0.81, 
+    'mood':0.82, 
+    'motivation':0.86, 
+    'alive':True, 
+    'nationality':'Srbija', 
+    'name':'BR0NER', 
+    'surname':'Kodan', 
+    'age':25,
+    'cost':10
+})
+with open('db/data.txt', 'w') as outfile:
+    json.dump(data, outfile)

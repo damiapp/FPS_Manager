@@ -3,6 +3,8 @@ from Team import Team
 import numpy
 import random
 import simpy
+import schedule
+import time
 
 class Score:
     def __init__(self,t1,t2):
@@ -89,14 +91,19 @@ team2=Team([ct1,ct2,ct3,ct4,ct5],1,0,1,1)
 #print(g1)
 #print(g2)
 sc=Score(0,0)
-for i in range(30):
+def Match():
     env=simpy.Environment()
     wipe_out=env.event()
     env.process(Round(team1,team2,env,wipe_out,sc))
     env.run(wipe_out)
     team1.reset_alive()
     team2.reset_alive()
+    sc.print_score()
+        
+schedule.every(1).seconds.do(Match)
+while True:
+    schedule.run_pending()
+    time.sleep(1)
     if(sc.t1>15 or sc.t2>15):
         break
     print("-----------------------")
-sc.print_score()
