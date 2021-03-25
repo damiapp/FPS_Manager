@@ -17,7 +17,8 @@ data['Players'].append({
     'name':'Dami', 
     'surname':'Kodan', 
     'age':25,
-    'cost':10
+    'cost':10,
+    'team':None
 })
 #2
 data['Players'].append({
@@ -34,7 +35,8 @@ data['Players'].append({
     'name':'Veseli', 
     'surname':'Ghost', 
     'age':25,
-    'cost':10
+    'cost':10,
+    'team':None
 })
 #3
 data['Players'].append({
@@ -51,7 +53,8 @@ data['Players'].append({
     'name':'Suki', 
     'surname':'Ljuba', 
     'age':25,
-    'cost':10
+    'cost':10,
+    'team':None
 })
 #4
 data['Players'].append({
@@ -68,7 +71,8 @@ data['Players'].append({
     'name':'Dzoni', 
     'surname':'Panzer', 
     'age':25,
-    'cost':10
+    'cost':10,
+    'team':None
 })
 #5
 data['Players'].append({
@@ -85,7 +89,8 @@ data['Players'].append({
     'name':'Sile', 
     'surname':'Gile', 
     'age':25,
-    'cost':10
+    'cost':10,
+    'team':None
 })
 #6
 data['Players'].append({
@@ -102,7 +107,8 @@ data['Players'].append({
     'name':'Peter', 
     'surname':'Kodan', 
     'age':25,
-    'cost':10
+    'cost':10,
+    'team':None
 })
 #7
 data['Players'].append({
@@ -119,7 +125,8 @@ data['Players'].append({
     'name':'Faker', 
     'surname':'Kodan', 
     'age':25,
-    'cost':10
+    'cost':10,
+    'team':None
 })
 #8
 data['Players'].append({
@@ -136,7 +143,8 @@ data['Players'].append({
     'name':'Mker', 
     'surname':'Kodan', 
     'age':25,
-    'cost':10
+    'cost':10,
+    'team':None
 })
 #9
 data['Players'].append({
@@ -153,7 +161,8 @@ data['Players'].append({
     'name':'FK1ER', 
     'surname':'Kodan', 
     'age':25,
-    'cost':10
+    'cost':10,
+    'team':None
 })
 #10
 data['Players'].append({
@@ -170,7 +179,8 @@ data['Players'].append({
     'name':'BR0NER', 
     'surname':'Kodan', 
     'age':25,
-    'cost':10
+    'cost':10,
+    'team':None
 })
 with open('db/data.txt', 'w') as outfile:
     json.dump(data, outfile)

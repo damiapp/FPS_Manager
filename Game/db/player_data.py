@@ -6,8 +6,19 @@ sys.path.append(parentdir)
 import psycopg2
 import Player
 import json
+from dotenv import load_dotenv
+load_dotenv()
 
-conn = psycopg2.connect("dbname=majortactics user=postgres password=sinisa71 ")
+# OR, the same with increased verbosity
+load_dotenv(verbose=True)
+
+# OR, explicitly providing path to '.env'
+from pathlib import Path  # Python 3.6+ only
+env_path = Path('.') / '.env'
+load_dotenv(dotenv_path=env_path)
+
+
+conn = psycopg2.connect("dbname=majortactics user=postgres password="+os.getenv("PASSWORD"))
 
 cur = conn.cursor()
 

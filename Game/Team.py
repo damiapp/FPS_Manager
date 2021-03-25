@@ -2,7 +2,8 @@ from Player import Player
 import statistics 
 import random
 class Team:
-    def __init__(self, players, unity, map_skill, expenses, strat):
+    def __init__(self, name, players, unity, map_skill, expenses, strat):
+        self.name=name
         self.players = players
         self.unity=unity
         data = 0
