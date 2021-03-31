@@ -14,4 +14,3 @@ class Manager:
             self.team.players.append(player)
             self.scout_finds.remove(player)
             self.budget=self.budget-player.cost
-

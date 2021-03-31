@@ -4,7 +4,6 @@ parentdir = os.path.dirname(currentdir)
 sys.path.append(parentdir)
 
 import psycopg2
-import Player
 import json
 from dotenv import load_dotenv
 load_dotenv()
@@ -23,13 +22,24 @@ conn = psycopg2.connect("dbname=majortactics user=postgres password="+os.getenv(
 cur = conn.cursor()
 
 
-with open('db/data.txt') as json_file:
+with open('db//column_add/data.txt') as json_file:
     data = json.load(json_file)
-
+d=0
+t=3
 for p in data['Players']:
     #if player exist then not insert Todo!
-    cur.execute("INSERT INTO player_data (talent, map_skill, weapon_skill, utility_usage, game_sense, communication, mood, motivation, alive, nationality, name, surname, age, cost) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",(p['talent'], p['map_skill'], p['weapon_skill'], p['utility_usage'], p['game_sense'], p['communication'], p['mood'], p['motivation'], p['alive'], p['nationality'], p['name'], p['surname'], p['age'], p['cost']))
-
+    if(d==5):
+        t=t+1     
+        d=0
+    cur.execute("INSERT INTO player_data (talent, map_skill, weapon_skill, \
+        utility_usage, game_sense, communication, mood, motivation,\
+        alive, nationality, name, surname, age, cost, team_id)\
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,\
+        %s, %s, %s)",(p['talent'], p['map_skill'], p['weapon_skill'],\
+        p['utility_usage'], p['game_sense'], p['communication'], \
+        p['mood'], p['motivation'], p['alive'], p['nationality'],\
+        p['name'], p['surname'], p['age'], p['cost'],t))
+    d=d+1
 # Query the database and obtain data as Python objects
 #cur.execute("SELECT * FROM player_data;")
 #cur.fetchone()

@@ -19,7 +19,7 @@ cur = conn.cursor()
 # Execute a command: this creates a new table
 cur.execute("CREATE TABLE player_data (id serial PRIMARY KEY, talent decimal, map_skill decimal,\
      weapon_skill decimal, utility_usage decimal, game_sense decimal, communication decimal, mood decimal,\
-          motivation decimal, alive boolean, nationality char(10), name char(10), surname char(10), age integer, \
+          motivation decimal, alive boolean, nationality char(15), name char(20), surname char(20), age integer, \
               cost decimal,team_id serial, FOREIGN KEY (team_id) references team_data(id));")
 
 # Make the changes to the database persistent
