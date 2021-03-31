@@ -83,41 +83,39 @@ def sigmoid(x):
 def weight(p1,p2):
     pass
 
-#Import players and teams from TABLES
-t1=Player(0.86, 0.81, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Dami", "Kodan",25,10)
-t2=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Veseli", "Ghost",24,10)
-t3=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Suki", "Ljuba",24,10)
-t4=Player(0.9, 0.9, 0.9, 0.71, 0.82, 0.78, 0.83, 0.89, True, "Srbija", "Subota", "Cane",24,10)
-t5=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Sile", "Gile",24,10)
+#Import Team from data
+id=str(random.randint(3,12))
+cur.execute("SELECT x.* FROM public.team_data x WHERE id="+id+";")
+v=cur.fetchone()
+team1 = Team(v[1].rstrip(),[],v[2],v[3],v[4],v[5])
+#Import players into team from data
+cur.execute("SELECT x.* FROM public.player_data x WHERE team_id = "+id+";")    
+for i in range(5):
+    v=cur.fetchone()
+    p=Player(float(v[1]), float(v[2]), float(v[3]), float(v[4]), float(v[5]), float(v[6]),\
+        float(v[7]), float(v[8]), v[9], v[10].rstrip(), v[11].rstrip(), v[12].rstrip(), float(v[13]), float(v[14]))
+    team1.add_player(p)
 
-team1=Team("GolaKurcina",[t1,t2,t3,t4,t5],1,0,1,1)
-
-ct1=Player(0.9, 0.9, 0.92, 0.68, 0.92, 0.61, 0.82, 0.86, True, "Srbija", "Skore", "ACE",25,10)
-ct2=Player(0.8, 0.9, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Faker", "Ghost",24,10)
-ct3=Player(0.8, 0.9, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "Mker", "Ljuba",24,10)
-ct4=Player(0.8, 0.8, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "FK1ER", "Panzer",24,10)
-ct5=Player(0.8, 0.89, 0.8, 0.8, 0.82, 0.81, 0.82, 0.86, True, "Srbija", "BR0NER", "Gile",24,10)
-
-team2=Team("GolaPickurina",[ct1,ct2,ct3,ct4,ct5],1,0,1,1)
-
+#Same as above
+id1=random.randint(3,12)
+while(id1==int(id)):
+    id1=random.randint(3,12)
+id1=str(id1)
+cur.execute("SELECT x.* FROM public.team_data x WHERE id="+id1+";")
+v=cur.fetchone()
+team2 = Team(v[1].rstrip(),[],v[2],v[3],v[4],v[5])
+#Team1 add players
+cur.execute("SELECT x.* FROM public.player_data x WHERE team_id = "+id1+";")
+for i in range(5):
+    v=cur.fetchone()
+    p=Player(float(v[1]), float(v[2]), float(v[3]), float(v[4]), float(v[5]), float(v[6]),\
+        float(v[7]), float(v[8]), v[9], v[10].rstrip(), v[11].rstrip(), v[12].rstrip(), float(v[13]), float(v[14]))
+    team2.add_player(p)
 
 # Close communication with the database
 cur.close()
 conn.close()
 
-#g1=0
-#g2=0
-
-#for x in range(100):
-#w1=abs(numpy.random.randn())
-#w2=abs(numpy.random.randn())
-#b=numpy.random.randn()
-#if(NN(m1,m2,w1,w2,b)>0.5):
-#        g1=g1+1
-#    else:
-#        g2=g2+1
-#print(g1)
-#print(g2)
 sc=Score(0,0)
 def Match():
     env=simpy.Environment()
@@ -127,7 +125,9 @@ def Match():
     team1.reset_alive()
     team2.reset_alive()
     sc.print_score()
-        
+
+print(team1.name+"  VS  "+team2.name)
+print('\n')
 schedule.every(1).seconds.do(Match)
 while True:
     schedule.run_pending()

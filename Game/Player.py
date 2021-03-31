@@ -17,17 +17,8 @@ class Player:
         self.age = age
         self.cost = cost
     def get_m_w(self):
-        return (self.talent*(self.map_skill + self.weapon_skill + self.utility_usage)*self.game_sense*random.uniform(0.8,1.1) + self.communication*random.uniform(0.9,1))*random.uniform(0.95,1)*((self.mood + self.motivation)*random.uniform(0.5,1.5))
-        # data=[self.talent, self.map_skill, self.weapon_skill]
-        # d1=statistics.mean(data)
-        # data=[self.utility_usage, self.game_sense, self.communication]
-        # d2=statistics.mean(data)
-        # data=[self.mood, self.motivation]
-        # d3=statistics.mean(data)
-        # w1=random.uniform(0.8,1)
-        # w2=random.uniform(0.8,1)
-        # w3=random.uniform(0.9,1)
-        # return d1*w1+d2*w2+d3*w3
+        return (self.talent*(self.map_skill + self.weapon_skill + self.utility_usage)*self.game_sense*random.uniform(0.8,1.1) \
+            + self.communication*random.uniform(0.9,1))*random.uniform(0.95,1)*((self.mood + self.motivation)*random.uniform(0.5,1.5))
     def set_alive(self,alive):
         self.alive = alive
     def assert_team(self,team_id):

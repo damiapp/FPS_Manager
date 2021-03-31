@@ -25,7 +25,8 @@ class Team:
         while not self.players[r].alive:
             r=random.randint(0,4)
         return self.players[r]
-
+    def add_player(self,player):
+        self.players.append(player)
     def cost(self):
         c=0
         for p in self.players:
