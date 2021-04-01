@@ -22,7 +22,7 @@ conn = psycopg2.connect("dbname=majortactics user=postgres password="+os.getenv(
 cur = conn.cursor()
 
 
-with open('db//column_add/data.txt') as json_file:
+with open('Game/db/column_add/data.txt') as json_file:
     data = json.load(json_file)
 d=0
 t=3
