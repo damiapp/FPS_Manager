@@ -23,6 +23,12 @@ public class MainMenuManager : MonoBehaviour
         activeButton = GameObject.Find(buttonName);
         activeButton.transform.SetAsLastSibling();
     }
+    
+    public void BackButton(int i) {
+        Panels[i].SetActive(false);
+        Panels[0].SetActive(true);
+        activePanel = 0;
+    }
 
     private void Update()
     {
@@ -77,4 +83,6 @@ public class MainMenuManager : MonoBehaviour
         }
         Panels[activePanel].SetActive(true);
     }
+
+
 }
